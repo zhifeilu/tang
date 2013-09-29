@@ -1,0 +1,26 @@
+<h3>给我们留言吧</h3>
+
+<% @message = Message.new %>
+<%= simple_form_for(@message, remote: true) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title, label: "留言主题" %>
+    <%= f.input :user, label: "联系人" %>
+    <%= f.input :phone, label: "电话" %>
+    <%= f.input :email, label: "联系邮箱" %>
+    <%= f.input :body, label: "留言内容" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, '提交留言' %>
+  </div>
+<% end %>
+
+<div class="tip">
+  <ul>
+    <li> 请正确的填写信息, 以主便我们能及时的联系你</li>
+    <li> 请不要重复提交信息</li>
+    <li> 友情提示, 最好的方式是给我们来电。</li>
+  </ul>
+</div>

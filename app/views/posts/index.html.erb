@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+    <div class="sidebar">
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">联系我们</div>
+          <div class="panel-body">
+            <ul class="un-styled">
+              <li>电 话：86 0512 58905516 </li>
+              <li>移动电话： 18662230008 </li>
+              <li>传 真：86 0512 58905516 </li>
+              <li>地 址：中国 江苏 张家港市 塘桥镇花园村大唐路</li> 
+              <li>网 站：http://zjgtgjx.1688.com/ http://zjgtgjxtg.com/</li>
+            </ul>
+          </div>    
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+    <ol class="breadcrumb">
+        <li>
+          <a href="/">网站首页</a>
+        </li>
+        <li class="active">新闻中心</li>
+    </ol>
+
+    <ul class='posts-list'>
+      <% @posts.each do |post| %>
+        <li class="<%= 'sticky' if post.sticky? %>">
+          <span class="pull-right">[<%= post.created_at.to_s %>]</span>
+          <%= link_to post.title, post %>
+        </li>
+      <% end %>
+    </ul>
+
+    <%= paginate @posts %>
+  </div>
+</div>

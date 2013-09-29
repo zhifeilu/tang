@@ -1,0 +1,69 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.item3{
+  position: relative;
+}
+
+.desc_promo {
+  position: absolute;
+  left: 0;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  color: white;
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+}
+
+.breadcrumb{
+  background: none repeat scroll 0 0 #0088CC;
+  color: #FFF;
+  a{
+    color: #FFF;
+  }
+}
+
+.widewrapper .breadcrumb > .active {
+  color: white;
+}
+.posts-list{
+  margin-left: -20px;
+
+  li{
+    border-bottom: 1px dashed #ddd;
+    padding: 10px 0;
+  }
+}
+
+.markdown{
+  p{
+    margin-bottom: 20px;
+  }
+}
+
+textarea{
+  min-height: 120px;
+}
+
+.tip{
+  margin-top: 20px;
+  color: red;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.navbar .nav {
+  a{
+    font-weight: bold;
+    color: #333;
+  }
+}
+
+li.sticky a{
+  color: red;
+}

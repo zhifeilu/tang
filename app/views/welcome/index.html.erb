@@ -1,0 +1,20 @@
+<div class="">
+  <div class="showroom-controls">
+      <div class="links">我们的产品 <i class="verticalSeparator"></i> <a href="/products">查看所有的产品</a></div>
+  </div>
+  <div class="row">
+    <% Product.limit(4).each do |product| %>
+      <div class="showroom-item col-sm-3">
+          <div class="image">
+              <%= image_tag product.avatar.url, class: "img-responsive", width: "263px" %>
+              <a class="overlay" href="<%= product_path(product) %>">
+                  <i class="glyphicons search"><i></i></i>
+                  <div class="name"><%= product.name %></div>
+              </a>
+          </div>
+      </div>
+    <% end %>                      
+  </div>
+
+  <div class="clearfix"></div>
+</div>

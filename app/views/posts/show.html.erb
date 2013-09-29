@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">公司新闻</div>
+        <div class="panel-body">
+          
+            <% Post.order('created_at desc').limit(5).each do |post| %>
+              <li><%= link_to post.title, post %></li>
+            <% end %>
+    
+        </div>    
+    </div>
+  </div>
+
+  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+    <ol class="breadcrumb">
+        <li>
+          <a href="/">网站首页</a>
+        </li>
+        <li>
+          <a href="/posts">新闻中心</a>
+        </li>
+        <li class="active"><%= @post.title %></li>
+    </ol>
+
+    <div class="c">
+      <div class="title" style="text-align: center">
+        <h3><%= @post.title %></h3>
+        <hr>
+        <small>发表于： <%= @post.created_at %></small>
+      </div>
+
+      <div class="markdown">
+        <%= simple_format @post.body %>
+      </div>
+    </div>
+
+  </div>
+</div>

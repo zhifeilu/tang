@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+    <%= render 'shares/sidebar' %>
+  </div>
+
+  <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+    <ol class="breadcrumb">
+        <li>
+          <a href="/">网站首页</a>
+        </li>
+        <li>
+          <a href="/products">天工产品</a>
+        </li>
+        <li class="active"><%= @product.name %></li>
+    </ol>
+
+    <div id="product">
+      <h3><%= @product.name %></h3>
+      <p><%= image_tag @product.avatar.thumb.url %></p>
+
+      <%= raw @product.body %>
+    </div>
+
+
+    <div class="admin">
+      <%= link_to 'Edit', edit_product_path(@product) %> |
+      <%= link_to 'Back', products_path %> |
+      <%= link_to "Destroy", @product, method: :delete  %>
+    </div>
+
+  </div>
+</div>
+

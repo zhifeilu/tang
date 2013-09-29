@@ -1,0 +1,13 @@
+<div class="sidebar">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">公司新闻</div>
+      <div class="panel-body">
+        
+          <% Post.order('created_at desc').limit(8).each do |post| %>
+            <li><%= link_to post.title, post %></li>
+          <% end %>
+  
+      </div>    
+  </div>
+</div>
