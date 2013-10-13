@@ -1,5 +1,6 @@
 Tang::Application.routes.draw do
 
+  mount Ckeditor::Engine => '/ckeditor'
   get "/about" => 'welcome#about'
   get "/contact" => 'welcome#contact'
   resources :messages, only: [:index, :create, :destroy, :show]

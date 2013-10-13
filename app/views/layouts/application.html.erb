@@ -3,7 +3,7 @@
 <head>
   <title>张家港天工机械制造有限公司</title>
   <meta name="keywords" content="张家港天工机械制造有限公司|天工|金刚石线|硅开方|硅截断|硅切片|精密倒丝机|收线机|金刚石电镀线"/>
-  <meta name="description" content="张家港天工机械制造有限公司|天工|金刚石线|硅开方|硅截断|硅切片|精密倒丝机|收线机|金刚石电镀线"/>  
+  <meta name="description" content="张家港天工机械制造有限公司|天工|金刚石线|硅开方|硅截断|硅切片|精密倒丝机|收线机|金刚石电镀线"/>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -23,10 +23,10 @@
                 <ul class="nav navbar-nav">
                     <li class="active">
                         <a href="/">首页</a>
-                    </li>                  
+                    </li>
                     <li class="dropdown">
                         <a href="/about" data-toggle="dropdown">关于天工 <b class="caret"></b></a>
-                    </li>        
+                    </li>
                     <li class="dropdown">
                         <a href="/posts" data-toggle="dropdown">天工动态 <b class="caret"></b></a>
                     </li>
@@ -36,8 +36,8 @@
                     <li class="dropdown">
                         <a href="/contact" data-toggle="dropdown">联系我们 <b class="caret"></b></a>
                     </li>
-    
-                </ul>        
+
+                </ul>
             </div><!-- /.navbar-collapse -->
         </div>
     </nav>
@@ -46,49 +46,38 @@
 <div class="hidden-xs">
   <div id="layerslider" style="width: 100%; height: 405px; margin: 0px auto; ">
       <div class="ls-layer" style="transition2d:5;">
-          <img class="ls-bg" src="/assets/bg-five.jpg" alt="Slider Background">
+        <%= image_tag 'bg-five.jpg', class: "ls-bg" %>
+        <%= image_tag 'imac.jpg', class: "ls-s-1", style: "top:15px; left:650px; durationin : 1250; durationout : 1250;"  %>
 
-          <img  class="ls-s-1" src="/assets/imac.jpg" alt="iMac" height='355' width='491'
-                style="top:15px; left:650px; durationin : 1250; durationout : 1250;">
-
-          <div class="ls-s-1 large-caption" 
-               style="top:120px; left:20px; delayin : 750; slidedirection : fade; slideoutdirection : fade;">
-              <div><p>金刚石电镀线设备</p></div>
-              <div><p>生产线速度可达15—50m/min</p></div>
-              <div>
-                  <p>自动化操作,让生产更简单</p>
-              </div>
-          </div>
+        <div class="ls-s-1 large-caption"
+             style="top:120px; left:20px; delayin : 750; slidedirection : fade; slideoutdirection : fade;">
+            <div><p>金刚石电镀线设备</p></div>
+            <div><p>生产线速度可达15—50m/min</p></div>
+            <div>
+                <p>自动化操作,让生产更简单</p>
+            </div>
+        </div>
       </div>
 
       <div class="ls-layer" style="transition2d:5;">
-          <img class="ls-bg" src="/assets//bg-one.jpg" alt="Slider Background">
+        <%= image_tag 'bg-one.jpg', class: "ls-bg" %>
+        <%= image_tag 'fam_imac.png', class: "ls-s-1", style: "top:50px; left:50px; durationin : 1250; durationout : 1250; delayin : 0;"  %>
 
-          <img  class="ls-s-1" src="/assets/fam_imac.png" alt="iMac" 
-                style="top:50px; left:50px; durationin : 1250; durationout : 1250; delayin : 0;">
-          <img  class="ls-s-1" src="/assets/fam_macbook.png" alt="MacBook" 
-                style="top:190px; left:250px; durationin : 1250; durationout : 1250; delayin : 100;">
-          <img  class="ls-s-1" src="/assets/fam_ipad.png" alt="iPad" 
-                style="top:210px; left:0px; durationin : 1250; durationout : 1250; delayin : 200;">
-          <img  class="ls-s-1" src="/assets//fam_iphone.png" alt="iPhone" 
-                style="top:265px; left:160px; durationin : 1250; durationout : 1250; delayin : 300;">
 
-          <div class="ls-s-1 large-caption" 
+          <div class="ls-s-1 large-caption"
                style="top:130px; left:700px; delayin : 700; slidedirection : fade; slideoutdirection : fade;">
               <div><p>Layerslider:</p></div>
               <div><p>Highly configurable,</p></div>
               <div><p>fexible, responsive and fast</p></div>
           </div>
 
-      </div>   
+      </div>
 
        <div class="ls-layer" style="transition2d:5;">
-          <img class="ls-bg" src="/assets/bg-three.jpg" alt="Slider Background">
+        <%= image_tag 'bg-three.jpg', class: "ls-bg" %>
+        <%= image_tag 'macbook-air.png', class: "ls-s-1", style: "top:50px; left:50px; durationin : 1250; durationout : 1250; delayin : 0;"  %>
 
-          <img  class="ls-s-1" src="/assets/macbook-air.png" alt="MB Air" 
-                style="top:25px; left:50px; durationin : 1250; durationout : 1250;">
-
-          <div class="ls-s-1 large-caption" 
+          <div class="ls-s-1 large-caption"
                style="top:150px; left:750px; delayin : 750; slidedirection : fade; slideoutdirection : fade;">
               <div><p>Impress your visitors,</p></div>
               <div><p>and turn them into clients!</p></div>
@@ -126,7 +115,7 @@
             <h4>网站管理</h4>
             <% if user_signed_in? %>
               <ul class="grove-list">
-                <li><%= link_to('退出网站', destroy_user_session_path, :method => :delete) %>   </li>     
+                <li><%= link_to('退出网站', destroy_user_session_path, :method => :delete) %>   </li>
                 <li><%= link_to '增加新产品', new_product_path  %></li>
                 <li><%= link_to '增加新闻', new_post_path  %></li>
                 <li><%= link_to '查看留言', messages_path  %></li>
@@ -137,7 +126,7 @@
               <%= link_to('登陆网站', new_user_session_path)  %>
             <% end %>
         </div>
-        
+
         <div class="col-sm-3">
             <h4>联系我们</h4>
             <address>
@@ -146,12 +135,12 @@
               移动电话： 18662230008 <br>
               传   真：86 0512 58905516 <br>
             </address>
-        </div>            
+        </div>
     </div>
  </div>
 
  <div class="container copyright">
-    
+
  </div>
 </footer>
 

@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.turbolinks
+//= require ckeditor/init
 //= require turbolinks
 //= require_tree .
 
@@ -62,9 +63,9 @@ $('document').ready(function(){
     youtubePreview          : 'maxresdefault.jpg',
     showBarTimer        : false,
     showCircleTimer     : false,
- 
+
     // you can change this settings separately by layers or sublayers with using html style attribute
- 
+
     slideDirection          : 'right',
     slideDelay              : 4000,
     durationIn              : 1000,
